@@ -37,9 +37,10 @@ public class ProductModel {
     @Column(name = "expiry_date")
     private LocalDate expiryDate;
 
-    @NotEmpty(message = "Status cannot be empty.")
+//    @NotEmpty(message = "Status cannot be empty.")
     @Column(name = "status")
-    private String statusOfProduct;
+    @Enumerated(EnumType.STRING)
+    private ProductStatus statusOfProduct;
 
 
 //    @ManyToOne //do shelves

@@ -42,7 +42,7 @@
         <td th:text="${product.getQuantityOfProduct()}" />
         <td th:text="${product.getMeasurementUnit()}"></td>
         <td th:text="${product.getExpiryDate()}" />
-        <td th:text="${product.getStatusOfProduct()}" />
+        <td th:text="${product.getStatusOfProduct.getDisplayStatus()}" />
 
         <td><form th:action="@{'/deleteProduct/' + ${product.getProductId()} + '?shelfId=' + ${shelf.shelfId}}"  method="post">
           <input type="submit" class="btn btn-danger btn-sm" value="Delete product"/>

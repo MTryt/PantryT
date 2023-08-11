@@ -50,12 +50,11 @@
       <label for="expiryDate">Expiry date:</label>
       <input type="date" id="expiryDate" th:field="*{expiryDate}" class="form-control" >
 
-      <label for="statusOfProduct">Status:</label>
-      <select id="statusOfProduct" th:field="*{statusOfProduct}" class="form-control" required>
-        <option value=""></option>
-        <option value="Okay">Okay</option>
-        <option value="If special offer">If special offer</option>
-        <option value="Need to buy">Need to buy</option>
+      <label>Status:</label>
+      <select th:field="*{statusOfProduct}">
+        <option th:each="status : ${statusOfProduct}"
+                th:value="${status}" th:text="${status.displayStatus}">
+        </option>
       </select>
 
       <input type="submit" value="Save" class="btn btn-primary btn-block">

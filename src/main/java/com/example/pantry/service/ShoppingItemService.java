@@ -11,7 +11,6 @@ import com.example.pantry.repository.ShoppingItemRepository;
 
 import java.util.List;
 
-
 @Service
 @RequiredArgsConstructor
 @Slf4j

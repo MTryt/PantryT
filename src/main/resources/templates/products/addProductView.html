@@ -57,14 +57,13 @@
       <input type="date" id="expiryDate" name="expiryDate" class="form-control" th:field="*{expiryDate}" >
       <p class="error" th:if="${#fields.hasErrors('expiryDate')}" th:errors="*{expiryDate}"></p>
 
-      <label for="statusOfProduct">Status:</label>
-      <select id="statusOfProduct" name="statusOfProduct" class="form-control" th:field="*{statusOfProduct}" required>
-        <option value=""></option>
-        <option value="Okay">Okay</option>-->
-        <option value="If special offer">If special offer</option>
-        <option value="Need to buy">Need to buy</option>
+      <label>Status:</label>
+      <select th:field="*{statusOfProduct}" class="form-control">
+        <option th:each="status : ${statusOfProduct}"
+                th:value="${status}" th:text="${status.displayStatus}">
+        </option>
       </select>
-      <p class="error" th:if="${#fields.hasErrors('statusOfProduct')}" th:errors="*{statusOfProduct}"></p>
+<!--      <p class="error" th:if="${#fields.hasErrors('statusOfProduct')}" th:errors="*{statusOfProduct}"></p>-->
 
       <label for="shelf">Shelf:</label>
       <select id="shelf" name="shelf.shelfId" class="form-control" th:field="*{shelf.shelfId}" required>
