@@ -30,5 +30,4 @@ public class ShelfService {
         return shelfRepository.findById(shelfId).orElse(null);
     }
 
-
 }

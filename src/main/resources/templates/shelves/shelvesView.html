@@ -42,16 +42,13 @@
         </tr>
         </thead>
         <tbody>
-        <!-- Iteracja przez listę półek i wyświetlenie ich w tabeli -->
         <tr th:each="shelf : ${shelves}">
             <td th:text="${shelf.shelfName}"></td>
-            <!-- Formularz do przechodzenia na shelfView-->
             <td>
                 <a th:href="@{/shelf/{shelfId}(shelfId=${shelf.shelfId})}">
                     <button class="btn btn-success">Shelf Inventory</button></a>
             </td>
             <td>
-                <!-- Formularz do usuwania półki -->
                 <form th:action="@{/shelves/delete/{shelfId}(shelfId=${shelf.shelfId})}" method="post" onsubmit="return deleteConfirm()">
                     <button type="submit" class="btn btn-danger">Delete shelf</button>
                 </form>

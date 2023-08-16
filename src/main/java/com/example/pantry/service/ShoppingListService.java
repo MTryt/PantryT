@@ -32,8 +32,4 @@ public class ShoppingListService {
         shoppingListRepository.deleteById(shoppingItemId);
     }
 
-    public Page<ShoppingListModel> getAllItems(Pageable pageable) {
-        return shoppingListRepository.findAll(pageable);
-    }
-
 }

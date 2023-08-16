@@ -53,8 +53,6 @@
                 th:value="${unit}" th:text="${unit.displayUnit}">
         </option>
       </select>
-<!--      <p class="error" th:if="${#fields.hasErrors('measurementUnit')}" th:errors="*{measurementUnit}"></p>-->
-
       <label for="expiryDate">Expiry date:</label>
       <input type="date" id="expiryDate" name="expiryDate" class="form-control" th:field="*{expiryDate}" >
       <p class="error" th:if="${#fields.hasErrors('expiryDate')}" th:errors="*{expiryDate}"></p>
@@ -65,8 +63,6 @@
                 th:value="${status}" th:text="${status.displayStatus}">
         </option>
       </select>
-<!--            <p class="error" th:if="${#fields.hasErrors('statusOfProduct')}" th:errors="*{statusOfProduct}"></p>-->
-
       <label for="shelf">Shelf:</label>
       <select id="shelf" name="shelf.shelfId" class="form-control" th:field="*{shelf.shelfId}" required>
         <option value=""></option>

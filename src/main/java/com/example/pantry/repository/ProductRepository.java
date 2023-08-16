@@ -12,8 +12,6 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<ProductModel, Long> {
     Page<ProductModel>findAll(Pageable pageable);
 
-    //Nowe rzeczy
-    // do sortowania:
     List<ProductModel> findByShelf(ShelfModel shelf, Sort sort);
 
 

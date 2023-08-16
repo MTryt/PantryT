@@ -48,8 +48,6 @@ public class ShelfController {
         return "redirect:/shelves";
     }
 
-
-    //Rzeczy do sortowania
     @GetMapping("shelf/{shelfId}")
     public String viewShelf(@PathVariable("shelfId") Long shelfId,
                             @RequestParam(name = "sortField", required = false, defaultValue = "productName") String sortField,

@@ -38,10 +38,8 @@
         <option th:each="product : ${products}" th:value="${product.productName}" th:text="${product.productName}"></option>
       </select>
 
-
       <label for="itemQuantity">Quantity:</label>
       <input type="number" id="itemQuantity" name="itemQuantity" min="1" class="form-control" required>
-
 
       <label>Measurement Unit:</label>
       <select th:field="*{measurementUnit}" class="form-control">
@@ -49,7 +47,6 @@
                 th:value="${unit}" th:text="${unit.displayUnit}">
         </option>
       </select>
-
 
       <input type="submit" value="Add product" class="btn btn-success btn-block">
 

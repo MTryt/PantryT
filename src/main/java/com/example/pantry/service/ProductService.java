@@ -38,12 +38,6 @@ public class ProductService {
     public void removeProduct(Long productId) {
         productRepository.deleteById(productId);
     }
-
-    public Page<ProductModel> getAllProducts(Pageable pageable) {
-        return productRepository.findAll(pageable);
-    }
-
-    //Do sortowania
     public List<ProductModel> getProductsByShelfAndSortBy(ShelfModel shelf, Sort sort) {
         return productRepository.findByShelf(shelf, sort);
     }

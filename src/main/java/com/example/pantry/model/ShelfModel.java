@@ -21,17 +21,13 @@ public class ShelfModel {
     @Column(name = "shelf_id")
     private Long shelfId;
 
-
     @NotBlank(message = "Shelf name cannot be blank")
     @Size(min = 3, max = 30, message = "Shelf name must be between 3 and 30 characters")
     @Column(name = "shelf_name")
     private String shelfName;
 
-
-    //    @OneToMany //do products
     @OneToMany(mappedBy = "shelf", cascade = CascadeType.ALL)
     private List<ProductModel> products;
-
     @Override
     public String toString() {
         return "ShelfModel{" +

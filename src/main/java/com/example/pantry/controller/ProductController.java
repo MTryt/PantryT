@@ -43,7 +43,6 @@ public class ProductController {
         return "products/addProductView";
     }
 
-//nowe z walidacją
     @PostMapping("/addProduct")
     public String postAddProductAction(@ModelAttribute @Valid ProductModel productModel, BindingResult result, @RequestParam Long shelfId, Model model) {
         if (result.hasErrors()) {
