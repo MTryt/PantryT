@@ -33,7 +33,7 @@ public class ShelfController {
 
     @PostMapping("/shelves/add")
     public String addShelf(@Valid @ModelAttribute ShelfModel shelfModel, BindingResult bindingResult, Model model) {
-        if (bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             model.addAttribute("shelves", shelfService.getAllShelves());
             model.addAttribute("newShelf", shelfModel);
             return "shelves/shelvesView";

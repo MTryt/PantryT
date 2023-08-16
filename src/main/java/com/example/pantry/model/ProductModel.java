@@ -31,7 +31,6 @@ public class ProductModel {
     @Column(name = "quantity")
     private Integer quantityOfProduct;
 
-//    @NotEmpty(message = "Measurement unit cannot be empty.")
     @Column(name = "measurement_unit")
     @Enumerated(EnumType.STRING)
     private MeasurementUnitEnum measurementUnit;

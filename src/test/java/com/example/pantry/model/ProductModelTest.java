@@ -27,7 +27,7 @@ class ProductModelTest {
 
     @Test
     @DisplayName("Test checks if product details are entered correctly")
-    void setValidProduct(){ //czy robi się taki ogólny test czy każdego elementu pojedynczo?
+    void setValidProduct(){
         //given
         ProductModel product = new ProductModel();
         product.setProductName("Apple");
